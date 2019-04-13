@@ -28,6 +28,10 @@
         <servlet-class>com.controller.LoginForm</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>VerifierDonnee</servlet-name>
+        <servlet-class>com.controller.VerifierDonnee</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>LoginPanel</servlet-name>
         <servlet-class>com.model.LoginPanel</servlet-class>
     </servlet>
@@ -50,6 +54,10 @@
     <servlet-mapping>
         <servlet-name>LoginPanel</servlet-name>
         <url-pattern>/loginPanel</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VerifierDonnee</servlet-name>
+        <url-pattern>/verifierDonnee</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

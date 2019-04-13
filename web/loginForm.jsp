@@ -13,23 +13,53 @@
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <title>JSP Page</title>
+        <title>Login Form</title>
     </head>
-    <body>
-        <div class=" flex-container row p-3">
+    <body style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/31.jpg');background-size: cover; background-repeat:no-repeat; background-position: center center;" >
+        <header>
+            
+        </header>
+        <!-- Full Page Intro -->
+        <div class="vuew">
+                <!--Grid row-->
+                <div class="row">
+                  <!--Grid column-->
+                  <div class="col-md-3"></div>
+                  <div class="col-md-6 col-xl-5 mb-4">
+                    <!--Form-->
+                    <form action="verifierDonnee" type="post">
+                    <div class="card wow fadeInCentre">
+                      <div class="card-body">
+                          
+                              <!--Body-->
+                                <div class="md-form">
+                                  <i class="fas fa-user prefix white-text active"></i>
+                                  <input type="text" id="form3" class="white-text form-control">
+                                  <label for="form3" class="active">Nom utilisateur</label>
+                                </div>
+                                <div class="md-form">
+                                  <i class="fas fa-lock prefix white-text active"></i>
+                                  <input type="password" id="form4" class="white-text form-control">
+                                  <label for="form4">Password</label>
+                                </div>
+                                <div class="text-center mt-4">
+                                  <button class="btn btn-primery">Entrer</button>
+                                  <hr class="hr-light mb-3 mt-4">
 
-            <form action="adminPanel" type="GET">
-            <div class="form-group">
-              <label for="nom">Nom utilisateur</label>
-              <input type="text" class="form-control" name="nomUtilisateur" id="nom">
+                                </div>
+                        
+                      </div>
+                    </div>
+                    </form>
 
-            </div>
-            <div class="form-group">
-              <label for="password1">Password</label>
-              <input type="password" class="form-control" name="password" id="password1">
-            </div>
-             <button type="submit" class="btn btn-primary" >Entrer</button> 
-         </form>
-        </div><!-- END SECTION -->
+                    <!--/.Form-->
+                  </div>
+                  <div class="col-md-3"></div>
+                  <!--Grid column-->
+                </div>
+                <!--Grid row-->
+              
+          <!-- Full Page Intro -->
+        </div>
     </body>
 </html>

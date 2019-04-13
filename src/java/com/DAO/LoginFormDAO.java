@@ -27,13 +27,13 @@ public class LoginFormDAO {
     ResultSet rs = null;
     
     
-    public void ouvrirPanel(String login, String password) throws SQLException{
-        try {
-         con = ConnectionDB.createConnection();   
+     public boolean verification(String login, String password) throws SQLException{
+        
+        con = ConnectionDB.createConnection();   
         stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
         
         stmt = con.createStatement();
-     adminList = new ArrayList<LoginForm>();    
+        adminList = new ArrayList<LoginForm>();    
         String querySelectID = "SELECT id,login, mdp from admins WHERE Login = '"+ login +"'";
         preparedStatement = con.prepareStatement(querySelectID);
         
@@ -41,25 +41,15 @@ public class LoginFormDAO {
         int ID=rs.getInt("ID");
         String LOGIN=rs.getString("LOGIN");
         String MDP=rs.getString("MDP");
-        if(rs!=null)
-            if(rs.getString("MDP")==password)
-             adminList.add(new LoginForm(
-                        ID,
-                        LOGIN,
-                        MDP));   
-        }
-        catch(SQLException e){
-             System.out.println(e.getMessage());
+        if(rs!=null){
+            if(rs.getString("MDP")==password){
+             return true; 
+            } else{
+            return false;
+            } 
+        }else{
+             return false;
         
-        } finally {
-
-            if (stmt != null) {
-                stmt.close();
-            }
-
-            if (con != null) {
-                con.close();
-            }
-        }
+        } 
     }
 }

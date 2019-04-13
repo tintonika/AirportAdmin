@@ -17,16 +17,27 @@
         
         
     </head>
-    <body>
-        <div class="flex-container bg-danger">
-            <div class="block-inline">
-            <label for='btn1'>lancer le chargement du calendrier des vols</label>
-        <a href="/" class="btn btn-text-success" id='btn1' role="button">Start</a>       
-               </div>
-            <div class="block-inline">
-            <label for='btn2'>lancer le chargement du calendrier des vols</label>        
-        <a href="/" class="btn btn-text-success" id='btn2' role="button">Start</a>   
-        </div>
+    <body style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/31.jpg');background-size: cover; background-repeat:no-repeat; background-position: center center;">
+        
+        <div class="row">
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Lancer le chargement du calendrier des vols</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-success">START</a>
+                </div>
+              </div>
             </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">lancer le chargement des événements de vols</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-success">START</a>
+                </div>
+              </div>
+            </div>
+         </div>
     </body>
 </html>
