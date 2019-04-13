@@ -6,6 +6,7 @@
 package com.controller;
 
 import com.DAO.LoginFormDAO;
+import com.model.LoginForm;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -30,16 +31,20 @@ public class VerifierDonnee extends HttpServlet {
         String nom = request.getParameter("nom");
         String password = request.getParameter("password");
         
-        if (password.equals("") && nom.equals("")){
-          out.println("vous n’êtes pas un utilisateur valide!");
+        if (password=="" || nom==""){
+          out.println("vous n’êtes pas un utilisateur valide!"+nom+password);
           request.getRequestDispatcher("loginForm.jsp").include(request,response);
                   
         } else {
          LoginFormDAO dao = new LoginFormDAO();
-         if(dao.verification(nom, password)==true){
-          request.getRequestDispatcher("adminPanel.jsp").forward(request,response);
+         boolean res=dao.verification(nom, password);
+//         String s1=Boolean.toString(res);
+//         out.println("******"+s1);
+         request.getRequestDispatcher("adminPanel.jsp").include(request,response);
+         if(res){
+             request.getRequestDispatcher("adminPanel.jsp").forward(request,response);
          }else{
-             out.println("vous n’êtes pas un utilisateur valide!");
+             out.println("vous n’êtes pas un utilisateur valide! "+res);
              request.getRequestDispatcher("loginForm.jsp").include(request,response);
          }    
     

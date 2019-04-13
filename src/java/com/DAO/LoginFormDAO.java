@@ -6,7 +6,8 @@
 package com.DAO;
 
 import com.connection.ConnectionDB;
-import com.controller.LoginForm;
+import com.model.LoginForm;
+import com.controller.VerifierDonnee;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -22,7 +23,7 @@ public class LoginFormDAO {
     PreparedStatement preparedStatement = null;
     Statement stmt = null;
     Connection con = null;
-    public static ArrayList<LoginForm> adminList;
+    //public static ArrayList<LoginForm> adminList;
     
     ResultSet rs = null;
     
@@ -33,16 +34,16 @@ public class LoginFormDAO {
         stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
         
         stmt = con.createStatement();
-        adminList = new ArrayList<LoginForm>();    
+        //adminList = new ArrayList<LoginForm>();    
         String querySelectID = "SELECT id,login, mdp from admins WHERE Login = '"+ login +"'";
         preparedStatement = con.prepareStatement(querySelectID);
         
         ResultSet rs = preparedStatement.executeQuery();
-        int ID=rs.getInt("ID");
-        String LOGIN=rs.getString("LOGIN");
+        //int ID=rs.getInt("ID");
+        //String LOGIN=rs.getString("LOGIN");
         String MDP=rs.getString("MDP");
         if(rs!=null){
-            if(rs.getString("MDP")==password){
+            if(MDP==password){
              return true; 
             } else{
             return false;
