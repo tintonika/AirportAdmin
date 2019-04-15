@@ -7,17 +7,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <title>Login Form</title>
-    </head>
+     <jsp:include page="head.jsp" /> 
     <body style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/31.jpg');background-size: cover; background-repeat:no-repeat; background-position: center center;" >
         <header>
-            
+          
         </header>
         <!-- Full Page Intro -->
         <div class="vuew">
@@ -27,8 +20,9 @@
                   <div class="col-md-3"></div>
                   <div class="col-md-6 col-xl-5 mb-4">
                     <!--Form-->
-                    <form action="verifierDonnee" type="post">
-                    <div class="card wow fadeInCentre">
+                    <form action="verifierDonnee" type="post" >
+                    <div class="card wow fadeInCentre " >
+                        <img class="img-responsive" src="img/Logo.png" width="100" height="150"> 
                       <div class="card-body">
                           
                               <!--Body-->

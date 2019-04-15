@@ -1,0 +1,78 @@
+body {
+    margin-left: auto;
+    margin-right: auto;
+    background-image:url("https://mdbootstrap.com/img/Photos/Others/images/31.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+p{
+    color: aliceblue;
+}
+
+.title {
+    color: #000;
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.intro {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    text-align: center;
+}
+
+
+/******** HEADER ********/
+header {
+  margin: 0 auto 0;
+    max-width: 1400px;
+    padding: 10px 0 5px;
+}
+#title-header {
+    font-size: 2.3rem;
+    font-weight: 900;
+    max-width: 900px;
+    text-align: center;
+    margin: 0 auto 0;
+}
+
+/******** SECTION ********/
+.flex-container {
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 1000px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.section {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+
+    justify-content: flex-start;
+    flex-direction: column;
+
+}
+
+
+/******** @MEDIA ********/
+@media only screen and (max-width: 768px) {
+/*
+    .flex-container {
+        margin: 0 auto;
+        max-width: 1000px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+  */  
+  
+   
+
+}

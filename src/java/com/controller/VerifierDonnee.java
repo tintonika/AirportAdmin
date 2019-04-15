@@ -5,6 +5,7 @@
  */
 package com.controller;
 
+import com.DAO.LoginDAO;
 import com.DAO.LoginFormDAO;
 import com.model.LoginForm;
 import java.io.IOException;
@@ -25,7 +26,7 @@ public class VerifierDonnee extends HttpServlet {
    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
-          response.setContentType("text/html;charset=UTF-8");
+        response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         
         String nom = request.getParameter("nom");
@@ -33,20 +34,19 @@ public class VerifierDonnee extends HttpServlet {
         
         if (password=="" || nom==""){
           out.println("vous n’êtes pas un utilisateur valide!"+nom+password);
-          request.getRequestDispatcher("loginForm.jsp").include(request,response);
-                  
+          request.getRequestDispatcher("loginForm.jsp").include(request,response);                 
         } else {
-         LoginFormDAO dao = new LoginFormDAO();
-         boolean res=dao.verification(nom, password);
-//         String s1=Boolean.toString(res);
-//         out.println("******"+s1);
-         request.getRequestDispatcher("adminPanel.jsp").include(request,response);
-         if(res){
-             request.getRequestDispatcher("adminPanel.jsp").forward(request,response);
-         }else{
-             out.println("vous n’êtes pas un utilisateur valide! "+res);
-             request.getRequestDispatcher("loginForm.jsp").include(request,response);
-         }    
+            LoginDAO dao = new LoginDAO();
+            boolean res=dao.verification(nom, password);
+   //         String s1=Boolean.toString(res);
+   //         out.println("******"+s1);
+    //        request.getRequestDispatcher("adminPanel.jsp").include(request,response);
+            if(res){
+                request.getRequestDispatcher("adminPanel.jsp").forward(request,response);
+            }else{
+                out.println("vous n’êtes pas un utilisateur valide! "+res);
+                request.getRequestDispatcher("loginForm.jsp").include(request,response);
+            }    
     
     }
         }

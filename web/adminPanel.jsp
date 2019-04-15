@@ -5,18 +5,36 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+     String Btn1Name;
+  if(request.getParameterValues("btn1") != null){
+      if( request.getParameter("btn1")=="Start")
+            Btn1Name = request.getParameter("Stop");
+      Btn1Name = request.getParameter("Start");
+  } else {
+  Btn1Name = "Start";
+  }
+%>
 <!DOCTYPE html>
+
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <title>Panneau d'administration</title>
-        
-        
-    </head>
+    <jsp:include page="head.jsp" />
+    <script>
+        function changeNameBtn1() {
+            if(document.getElementById('btn1').value=='START'){
+                document.getElementById('btn1').value='STOP';
+                document.getElementById('btn1').className='btn btn-danger';}
+            else{
+                document.getElementById('btn1').value='START';}
+        }
+        function changeNameBtn2() {
+            if(document.getElementById('btn2').value=='START')
+                document.getElementById('btn2').value='STOP';
+                document.getElementById('btn2').className='btn btn-danger';}
+            else
+                document.getElementById('btn2').value='START';
+        }
+    </script>
     <body style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/31.jpg');background-size: cover; background-repeat:no-repeat; background-position: center center;">
         
         <div class="row">
@@ -25,7 +43,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Lancer le chargement du calendrier des vols</h5>
                   <p class="card-text"></p>
-                  <a href="#" class="btn btn-success">START</a>
+                  <input  class="btn btn-success" id="btn1" button type="button" value="<%=Btn1Name%>" onclick="" >
                 </div>
               </div>
             </div>
@@ -34,7 +52,7 @@
                 <div class="card-body">
                   <h5 class="card-title">lancer le chargement des événements de vols</h5>
                   <p class="card-text"></p>
-                  <a href="#" class="btn btn-success">START</a>
+                 <input  class="btn btn-success" id="btn2" button type="button" value="START" onclick="changeNameBtn2()" >
                 </div>
               </div>
             </div>
