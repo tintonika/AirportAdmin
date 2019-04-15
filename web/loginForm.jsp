@@ -22,7 +22,7 @@
                     <!--Form-->
                     <form action="verifierDonnee" type="post" >
                     <div class="card wow fadeInCentre " >
-                        <img class="img-responsive" src="img/Logo.png" width="100" height="150"> 
+                        <img class="images-responsive" src="images/Logo.png" width="100" height="150"> 
                       <div class="card-body">
                           
                               <!--Body-->

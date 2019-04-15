@@ -43,7 +43,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Lancer le chargement du calendrier des vols</h5>
                   <p class="card-text"></p>
-                  <input  class="btn btn-success" id="btn1" button type="button" value="<%=Btn1Name%>" onclick="" >
+                  <a href="/insertVol" >  <input  class="btn btn-success" id="btn1" button type="button" value="<%=Btn1Name%>" onclick="" ></a>
                 </div>
               </div>
             </div>
@@ -52,7 +52,7 @@
                 <div class="card-body">
                   <h5 class="card-title">lancer le chargement des événements de vols</h5>
                   <p class="card-text"></p>
-                 <input  class="btn btn-success" id="btn2" button type="button" value="START" onclick="changeNameBtn2()" >
+                  <a  href="/updateDetails">  <input  class="btn btn-success" id="btn2" button type="button" value="START" onclick="changeNameBtn2()" ></a>
                 </div>
               </div>
             </div>
