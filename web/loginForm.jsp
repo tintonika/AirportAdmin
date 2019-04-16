@@ -20,7 +20,7 @@
                   <div class="col-md-3"></div>
                   <div class="col-md-6 col-xl-5 mb-4">
                     <!--Form-->
-                    <form action="verifierDonnee" type="post" >
+                    <form action="verifierDonnee" method="post" >
                     <div class="card wow fadeInCentre " >
                         <img class="images-responsive" src="images/Logo.png" width="100" height="150"> 
                       <div class="card-body">

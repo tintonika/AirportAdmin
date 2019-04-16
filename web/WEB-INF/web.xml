@@ -16,10 +16,6 @@
         <load-on-startup>2</load-on-startup>
     </servlet>
     <servlet>
-        <servlet-name>AdminPanel</servlet-name>
-        <servlet-class>com.controller.AdminPanel</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>LoginForm</servlet-name>
         <servlet-class>com.controller.LoginForm</servlet-class>
     </servlet>
@@ -39,13 +35,13 @@
         <servlet-name>InsertVol</servlet-name>
         <servlet-class>com.controller.InsertVol</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AdminPanel</servlet-name>
+        <servlet-class>com.controller.AdminPanel</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>*.htm</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>AdminPanel</servlet-name>
-        <url-pattern>/adminPanel</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>LoginForm</servlet-name>
@@ -66,6 +62,10 @@
     <servlet-mapping>
         <servlet-name>InsertVol</servlet-name>
         <url-pattern>/insertVol</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminPanel</servlet-name>
+        <url-pattern>/adminPanel</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

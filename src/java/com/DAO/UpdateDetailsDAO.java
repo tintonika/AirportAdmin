@@ -27,7 +27,7 @@ public class UpdateDetailsDAO {
 
             con = ConnectionDB.createConnection();
 
-            JSONArray obj = (JSONArray) parser.parse(new FileReader("G:/Rosemont/4 Session/Projet/MasterBcup/Derniere version/AirportMTL/src/java/com/files/updateDetails.json"));  // HERE PROBLEM
+            JSONArray obj = (JSONArray) parser.parse(new FileReader("G:/AirportAdmin/src/java/com/files/updateDetails.json"));  // HERE PROBLEM
 
             for (Object o : obj) {
 

@@ -35,15 +35,15 @@
                 document.getElementById('btn2').value='START';
         }
     </script>
-    <body style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/31.jpg');background-size: cover; background-repeat:no-repeat; background-position: center center;">
-        
+    <body>
         <div class="row">
             <div class="col-sm-6">
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Lancer le chargement du calendrier des vols</h5>
                   <p class="card-text"></p>
-                  <a href="/insertVol" >  <input  class="btn btn-success" id="btn1" button type="button" value="<%=Btn1Name%>" onclick="" ></a>
+                  <a href="/airportadmin/insertVol" >  
+                      <input  class="btn btn-success" id="btn1" button type="button" value="<%=Btn1Name%>" onclick="" ></a>
                 </div>
               </div>
             </div>
@@ -52,7 +52,7 @@
                 <div class="card-body">
                   <h5 class="card-title">lancer le chargement des événements de vols</h5>
                   <p class="card-text"></p>
-                  <a  href="/updateDetails">  <input  class="btn btn-success" id="btn2" button type="button" value="START" onclick="changeNameBtn2()" ></a>
+                  <a  href="/airportadmin/updateDetails">  <input  class="btn btn-success" id="btn2" button type="button" value="START" onclick="changeNameBtn2()" ></a>
                 </div>
               </div>
             </div>
