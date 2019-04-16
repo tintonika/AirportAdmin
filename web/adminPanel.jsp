@@ -6,6 +6,11 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
+    
+    String numTel = (String)request.getAttribute("NUMTEL");
+    
+    
+    
      String Btn1Name;
   if(request.getParameterValues("btn1") != null){
       if( request.getParameter("btn1")=="Start")
@@ -36,6 +41,7 @@
         }
     </script>
     <body>
+        
         <div class="row">
             <div class="col-sm-6">
               <div class="card">
@@ -44,6 +50,7 @@
                   <p class="card-text"></p>
                   <a href="/airportadmin/insertVol" >  
                       <input  class="btn btn-success" id="btn1" button type="button" value="<%=Btn1Name%>" onclick="" ></a>
+                      <%= numTel %>
                 </div>
               </div>
             </div>

@@ -44,9 +44,7 @@ public class UpdateDetailsDAO {
                 String query = "UPDATE details SET  DATE_REVISE =?, HEURE_REVISE =?, PORTE = ?, STATUT = ? WHERE ID_VOL = ?";
                         
                 preparedStatement = con.prepareStatement(query);
-
-               
-               
+              
                 preparedStatement.setString(1, DATE_REVISE);
                 preparedStatement.setString(2, HEURE_REVISE);
                 preparedStatement.setString(3, PORTE);

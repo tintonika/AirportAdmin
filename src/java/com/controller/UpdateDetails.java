@@ -37,7 +37,10 @@ public class UpdateDetails extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
           UpdateDetailsDAO dao = new UpdateDetailsDAO();
-        dao.updateDetails();
+        
+          dao.updateDetails();
+          
+          
         
 
         request.getRequestDispatcher("/adminPanel.jsp").forward(request, response);

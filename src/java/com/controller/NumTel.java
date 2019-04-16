@@ -5,7 +5,8 @@
  */
 package com.controller;
 
-import com.DAO.InsertVolDetailsDAO;
+import com.DAO.TrouverInscritDAO;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -18,21 +19,18 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.simple.parser.ParseException;
 
 
-public class InsertVol extends HttpServlet {
+public class NumTel extends HttpServlet {
 
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, SQLException, ParseException {
+            throws ServletException, IOException, FileNotFoundException, ParseException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-           InsertVolDetailsDAO dao = new InsertVolDetailsDAO();
-            dao.deleteDetails();
-            dao.deleteVols();
-            dao.insertVol();
-            dao.insertDetails();
-
-            request.getRequestDispatcher("adminPanel").forward(request, response);
-        }
+        
+        
+        TrouverInscritDAO dao = new TrouverInscritDAO();
+  
+        //request.setAttribute("NUMTEL", dao.trouverNumTel() );
+        request.getRequestDispatcher("/adminPanel.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -46,13 +44,13 @@ public class InsertVol extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, FileNotFoundException {
         try {
             processRequest(request, response);
-        } catch (SQLException ex) {
-            Logger.getLogger(InsertVol.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ParseException ex) {
-            Logger.getLogger(InsertVol.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(NumTel.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(NumTel.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -66,13 +64,13 @@ public class InsertVol extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, FileNotFoundException {
         try {
             processRequest(request, response);
-        } catch (SQLException ex) {
-            Logger.getLogger(InsertVol.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ParseException ex) {
-            Logger.getLogger(InsertVol.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(NumTel.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(NumTel.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
