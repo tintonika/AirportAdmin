@@ -43,6 +43,10 @@
         <servlet-name>NumTel</servlet-name>
         <servlet-class>com.controller.NumTel</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SupprimerInscriptionSMS</servlet-name>
+        <servlet-class>com.controller.SupprimerInscriptionSMS</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>*.htm</url-pattern>
@@ -74,6 +78,10 @@
     <servlet-mapping>
         <servlet-name>NumTel</servlet-name>
         <url-pattern>/numTel</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SupprimerInscriptionSMS</servlet-name>
+        <url-pattern>/supprimerInscriptionSMS</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

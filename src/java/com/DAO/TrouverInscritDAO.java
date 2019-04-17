@@ -21,7 +21,7 @@ public class TrouverInscritDAO {
     Connection con = null;
     String telMatched;
 
-    public void trouverNumTel() throws FileNotFoundException, IOException, ParseException, SQLException {
+    public String trouverNumTel() throws FileNotFoundException, IOException, ParseException, SQLException {
 
         try {
             con = ConnectionDB.createConnection();
@@ -35,15 +35,18 @@ public class TrouverInscritDAO {
             for (Object o : obj) {
                 JSONObject details = (JSONObject) o;
                 int ID_VOL = (int) (long) details.get("ID_VOL");
+                int STATUT = (int) (long) details.get("STATUT");
                 
-                String querySelectIDInscrit = "SELECT Telephone from inscrits WHERE ID_VOL = " + ID_VOL + "'";
+                
+                String querySelectIDInscrit = "SELECT Telephone from inscrits WHERE ID_VOL = '" + ID_VOL + "'";
                 preparedStatement = con.prepareStatement(querySelectIDInscrit);
                 ResultSet rs = preparedStatement.executeQuery();
 
                 if (rs.next()) {
                     telMatched = rs.getString("Telephone");
-                    EnvoyerSMSDAO daoSMS = new EnvoyerSMSDAO();
-                    daoSMS.envoyerSMS(telMatched);
+
+                    //EnvoyerSMSDAO daoSMS = new EnvoyerSMSDAO();
+                    // daoSMS.envoyerSMS(telMatched, STATUT);
                 }
             }
 
@@ -63,6 +66,6 @@ public class TrouverInscritDAO {
         
            } 
                 
-        //return telMatched;
+        return telMatched;
     }
 }

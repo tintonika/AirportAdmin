@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
      <jsp:include page="head.jsp" /> 
-    <body style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/31.jpg');background-size: cover; background-repeat:no-repeat; background-position: center center;" >
+    <body>
         <header>
           
         </header>

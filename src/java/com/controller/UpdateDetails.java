@@ -41,6 +41,8 @@ public class UpdateDetails extends HttpServlet {
           dao.updateDetails();
           
           
+          
+          
         
 
         request.getRequestDispatcher("/adminPanel.jsp").forward(request, response);
