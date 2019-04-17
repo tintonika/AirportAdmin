@@ -21,7 +21,7 @@ public class TrouverInscritDAO {
     Connection con = null;
     String telMatched;
 
-    public String trouverNumTel() throws FileNotFoundException, IOException, ParseException, SQLException {
+    public void trouverNumTel() throws FileNotFoundException, IOException, ParseException, SQLException {
 
         try {
             con = ConnectionDB.createConnection();
@@ -66,6 +66,6 @@ public class TrouverInscritDAO {
         
            } 
                 
-        return telMatched;
+        //return telMatched;
     }
 }

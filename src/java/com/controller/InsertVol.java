@@ -22,15 +22,13 @@ public class InsertVol extends HttpServlet {
 
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, SQLException, ParseException {
+            throws ServletException, IOException, SQLException, ParseException, InterruptedException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-           InsertVolDetailsDAO dao = new InsertVolDetailsDAO();
-            dao.deleteDetails();
-            dao.deleteVols();
-            dao.insertVol();
-            dao.insertDetails();
-
+           
+            Automat6mois.automatisation6mois();
+            
+            
             request.getRequestDispatcher("adminPanel").forward(request, response);
         }
     }
@@ -49,9 +47,7 @@ public class InsertVol extends HttpServlet {
             throws ServletException, IOException {
         try {
             processRequest(request, response);
-        } catch (SQLException ex) {
-            Logger.getLogger(InsertVol.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ParseException ex) {
+        } catch (SQLException | ParseException | InterruptedException ex) {
             Logger.getLogger(InsertVol.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -69,9 +65,7 @@ public class InsertVol extends HttpServlet {
             throws ServletException, IOException {
         try {
             processRequest(request, response);
-        } catch (SQLException ex) {
-            Logger.getLogger(InsertVol.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ParseException ex) {
+        } catch (SQLException | ParseException | InterruptedException ex) {
             Logger.getLogger(InsertVol.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

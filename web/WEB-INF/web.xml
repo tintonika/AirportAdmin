@@ -40,10 +40,6 @@
         <servlet-class>com.controller.AdminPanel</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>NumTel</servlet-name>
-        <servlet-class>com.controller.NumTel</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>SupprimerInscriptionSMS</servlet-name>
         <servlet-class>com.controller.SupprimerInscriptionSMS</servlet-class>
     </servlet>
@@ -74,10 +70,6 @@
     <servlet-mapping>
         <servlet-name>AdminPanel</servlet-name>
         <url-pattern>/adminPanel</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>NumTel</servlet-name>
-        <url-pattern>/numTel</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>SupprimerInscriptionSMS</servlet-name>

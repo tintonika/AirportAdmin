@@ -23,20 +23,16 @@ public class UpdateDetails extends HttpServlet {
 
  
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, SQLException, ParseException {
+            throws ServletException, IOException, SQLException, ParseException, InterruptedException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
           
-            UpdateDetailsDAO dao = new UpdateDetailsDAO();
-            dao.updateDetails();
-          
-            SupprimerInscriptionSMSDAO daoSMS = new SupprimerInscriptionSMSDAO();
-            daoSMS.supprimerInscriptionSMS();
-        
-          
-          
-        
-
+           
+            
+            Automat10min.automatiosation10min();
+            
+            
+            
         request.getRequestDispatcher("/adminPanel.jsp").forward(request, response);
 
         }
@@ -56,9 +52,7 @@ public class UpdateDetails extends HttpServlet {
             throws ServletException, IOException {
         try {
             processRequest(request, response);
-        } catch (SQLException ex) {
-            Logger.getLogger(UpdateDetails.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ParseException ex) {
+        } catch (SQLException | ParseException | InterruptedException ex) {
             Logger.getLogger(UpdateDetails.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -76,9 +70,7 @@ public class UpdateDetails extends HttpServlet {
             throws ServletException, IOException {
         try {
             processRequest(request, response);
-        } catch (SQLException ex) {
-            Logger.getLogger(UpdateDetails.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ParseException ex) {
+        } catch (SQLException | ParseException | InterruptedException ex) {
             Logger.getLogger(UpdateDetails.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

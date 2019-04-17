@@ -14,6 +14,11 @@ class EnvoyerSMSDAO {
     public static final String AUTH_TOKEN = "7cc76a55106a6a7a4abce18293d25786";
     String message = "";
 
+    
+    
+    
+    
+    
     public void envoyerSMS(String telephone, int STATUT) {
 
         if (STATUT == 1) {

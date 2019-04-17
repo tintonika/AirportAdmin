@@ -61,7 +61,7 @@
             <div class="col-sm-6">
               <div class="card m-3">
                 <div class="card-body">
-                  <h5 class="card-title">lancer le chargement des événements de vols</h5>
+                  <h5 class="card-title">Lancer le chargement des événements de vols</h5>
                   <p class="card-text"></p>
                   <a  href="/airportadmin/updateDetails"> 
                       <input  class="btn btn-success" 
