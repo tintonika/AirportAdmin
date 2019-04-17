@@ -49,8 +49,11 @@
                   <h5 class="card-title">Lancer le chargement du calendrier des vols</h5>
                   <p class="card-text"></p>
                   <a href="/airportadmin/insertVol" >  
-                      <input  class="btn btn-success" id="btn1" button type="button" value="<%=Btn1Name%>" onclick="" ></a>
-                      <%= numTel %>
+                      <input  class="btn btn-success" id="btn1" button type="button" value="<%=Btn1Name%>" onclick="" >
+                  </a>
+                  <a href="/airportadmin/supprimerInscriptionSMS" >  
+                      <input  class="btn btn-danger" id="" button type="button" value="Supprimer Inscription SMS" onclick="" >
+                  </a>
                 </div>
               </div>
             </div>
