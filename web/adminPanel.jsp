@@ -13,9 +13,9 @@
     
      String Btn1Name;
   if(request.getParameterValues("btn1") != null){
-      if( request.getParameter("btn1")=="Start")
+      if( request.getParameter("btn1")=="START")
             Btn1Name = request.getParameter("Stop");
-      Btn1Name = request.getParameter("Start");
+      Btn1Name = request.getParameter("START");
   } else {
   Btn1Name = "Start";
   }
@@ -44,25 +44,48 @@
         
         <div class="row">
             <div class="col-sm-6">
-              <div class="card">
+              <div class="card m-3">
                 <div class="card-body">
                   <h5 class="card-title">Lancer le chargement du calendrier des vols</h5>
                   <p class="card-text"></p>
                   <a href="/airportadmin/insertVol" >  
-                      <input  class="btn btn-success" id="btn1" button type="button" value="<%=Btn1Name%>" onclick="" >
-                  </a>
-                  <a href="/airportadmin/supprimerInscriptionSMS" >  
-                      <input  class="btn btn-danger" id="" button type="button" value="Supprimer Inscription SMS" onclick="" >
+                      <input  class="btn btn-success" 
+                              id="btn1" button 
+                              type="button" 
+                              value="<%=Btn1Name%>" 
+                              onclick="" >
                   </a>
                 </div>
               </div>
             </div>
             <div class="col-sm-6">
-              <div class="card">
+              <div class="card m-3">
                 <div class="card-body">
                   <h5 class="card-title">lancer le chargement des événements de vols</h5>
                   <p class="card-text"></p>
-                  <a  href="/airportadmin/updateDetails">  <input  class="btn btn-success" id="btn2" button type="button" value="START" onclick="changeNameBtn2()" ></a>
+                  <a  href="/airportadmin/updateDetails"> 
+                      <input  class="btn btn-success" 
+                              id="btn2" button 
+                              type="button" 
+                              value="START" 
+                              onclick="changeNameBtn2()" >
+                  </a>
+                </div>
+              </div>
+            </div>
+                  <div class="col-sm-6">
+              <div class="card m-3">
+                <div class="card-body">
+                  <h5 class="card-title">Supprimer les Inscriptions SMS</h5>
+                  <p class="card-text"></p>
+      
+                  <a href="/airportadmin/supprimerInscriptionSMS" >  
+                      <input class="btn btn-danger" 
+                             id="" button 
+                             type="button" 
+                             value="Supprimer" 
+                             onclick="" >
+                  </a>
                 </div>
               </div>
             </div>
