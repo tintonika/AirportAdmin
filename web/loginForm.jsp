@@ -29,15 +29,15 @@
                                 <div class="md-form">
                                   <i class="fas fa-user prefix white-text active"></i>
                                   <input type="text" id="form3" name="nom" class="white-text form-control">
-                                  <label for="form3" class="active">Nom utilisateur</label>
+                                  <label for="form3" class="active">Nom d'utilisateur</label>
                                 </div>
                                 <div class="md-form">
                                   <i class="fas fa-lock prefix white-text active"></i>
                                   <input type="password" id="form4" name="password" class="white-text form-control">
-                                  <label for="form4">Password</label>
+                                  <label for="form4">Mot de pass</label>
                                 </div>
                                 <div class="text-center mt-4">
-                                  <button class="btn btn-primery">Entrer</button>
+                                  <button class="btn btn-primary w-100">Se connecter</button>
                                   <hr class="hr-light mb-3 mt-4">
 
                                 </div>

@@ -4,7 +4,7 @@
       "DATE_REVISE":"2019-04-16",
       "HEURE_REVISE":"10:35:01",
       "PORTE":"Q11",
-      "STATUT":1
+      "STATUT":3
    },
    {  
       "ID_VOL":2,   
@@ -25,7 +25,7 @@
       "DATE_REVISE":"2019-04-22",
       "HEURE_REVISE":"20:10:01",
       "PORTE":"Q13",
-      "STATUT":1
+      "STATUT":2
    },
     {  
       "ID_VOL":5,     

@@ -3,6 +3,7 @@ package com.controller;
 
 import com.DAO.SupprimerInscriptionSMSDAO;
 import com.DAO.UpdateDetailsDAO;
+import com.DAO.EnvoyerSMSDAO;
 import java.io.IOException;
 import java.sql.Date;
 import java.sql.SQLException;
@@ -37,13 +38,12 @@ public class Automat10min extends TimerTask {
             UpdateDetailsDAO dao = new UpdateDetailsDAO();
             dao.updateDetails();
 
+            EnvoyerSMSDAO daoSMS1 = new EnvoyerSMSDAO();
+            daoSMS1.trouverInscritEtEnvoyerSMS();   
             
-    
+             SupprimerInscriptionSMSDAO daoSMS = new SupprimerInscriptionSMSDAO();
+             daoSMS.supprimerInscriptionSMS();
             
-            SupprimerInscriptionSMSDAO daoSMS = new SupprimerInscriptionSMSDAO();
-            daoSMS.supprimerInscriptionSMS();
-            
-
 
         } catch (SQLException | IOException | ParseException ex) {
             Logger.getLogger(Automat10min.class.getName()).log(Level.SEVERE, null, ex);
